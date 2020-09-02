@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BreakArk_Client", "BreakArk_Client\BreakArk_Client.vcxproj", "{784943A6-3220-4B54-B86A-3BC5697F2C7D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BreakArk_Server", "BreakArk_Server\BreakArk_Server.vcxproj", "{113FF393-5D60-446C-8844-122DE88D587E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{784943A6-3220-4B54-B86A-3BC5697F2C7D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{784943A6-3220-4B54-B86A-3BC5697F2C7D}.Debug|Win32.Build.0 = Debug|Win32
+		{784943A6-3220-4B54-B86A-3BC5697F2C7D}.Release|Win32.ActiveCfg = Release|Win32
+		{784943A6-3220-4B54-B86A-3BC5697F2C7D}.Release|Win32.Build.0 = Release|Win32
+		{113FF393-5D60-446C-8844-122DE88D587E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{113FF393-5D60-446C-8844-122DE88D587E}.Debug|Win32.Build.0 = Debug|Win32
+		{113FF393-5D60-446C-8844-122DE88D587E}.Release|Win32.ActiveCfg = Release|Win32
+		{113FF393-5D60-446C-8844-122DE88D587E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

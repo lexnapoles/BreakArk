@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{784943A6-3220-4B54-B86A-3BC5697F2C7D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BreakArk_Client</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>Z:\Programación\TFC\BreakArk\dev_lib\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>Z:\Programación\TFC\BreakArk\dev_lib\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_net.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\BreakArk_Server\Server.h" />
+    <ClInclude Include="..\BreakArk_Server\ServerGame.h" />
+    <ClInclude Include="..\Resources\Ball.h" />
+    <ClInclude Include="..\Resources\Board.h" />
+    <ClInclude Include="..\Resources\Brick.h" />
+    <ClInclude Include="..\Resources\CollisionSystem.h" />
+    <ClInclude Include="..\Resources\Connection.h" />
+    <ClInclude Include="..\Resources\Game.h" />
+    <ClInclude Include="..\Resources\InputHandler.h" />
+    <ClInclude Include="..\Resources\Integration.h" />
+    <ClInclude Include="..\Resources\MathHelperFunctions.h" />
+    <ClInclude Include="..\Resources\Object.h" />
+    <ClInclude Include="..\Resources\Paddle.h" />
+    <ClInclude Include="..\Resources\Quadrilateral.h" />
+    <ClInclude Include="..\Resources\SDLHelperFunctions.h" />
+    <ClInclude Include="..\Resources\Texture.h" />
+    <ClInclude Include="..\Resources\Timer.h" />
+    <ClInclude Include="..\Resources\UDPSocket.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="ClientGame.h" />
+    <ClInclude Include="Counter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\BreakArk_Server\Server.cpp" />
+    <ClCompile Include="..\BreakArk_Server\ServerGame.cpp" />
+    <ClCompile Include="..\Resources\Ball.cpp" />
+    <ClCompile Include="..\Resources\Board.cpp" />
+    <ClCompile Include="..\Resources\Brick.cpp" />
+    <ClCompile Include="..\Resources\CollisionSystem.cpp" />
+    <ClCompile Include="..\Resources\Connection.cpp" />
+    <ClCompile Include="..\Resources\Game.cpp" />
+    <ClCompile Include="..\Resources\InputHandler.cpp" />
+    <ClCompile Include="..\Resources\Integration.cpp" />
+    <ClCompile Include="..\Resources\MathHelperFunctions.cpp" />
+    <ClCompile Include="..\Resources\Object.cpp" />
+    <ClCompile Include="..\Resources\Paddle.cpp" />
+    <ClCompile Include="..\Resources\Quadrilateral.cpp" />
+    <ClCompile Include="..\Resources\SDLHelperFunctions.cpp" />
+    <ClCompile Include="..\Resources\Texture.cpp" />
+    <ClCompile Include="..\Resources\Timer.cpp" />
+    <ClCompile Include="..\Resources\UDPSocket.cpp" />
+    <ClCompile Include="BreakArk_Client.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="ClientGame.cpp" />
+    <ClCompile Include="Counter.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
